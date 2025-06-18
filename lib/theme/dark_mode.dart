@@ -8,8 +8,8 @@ ThemeData darkMode = ThemeData(
     secondary: Colors.lightGreen.shade700,
     inversePrimary: Colors.lightGreen.shade300,
   ),
-  textTheme: ThemeData.light().textTheme.apply(
-    bodyColor: Colors.lightGreen[300],
+  textTheme: ThemeData.dark().textTheme.apply(
+    bodyColor: Colors.white,
     displayColor: Colors.white,
   ),
 );

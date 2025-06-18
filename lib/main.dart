@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saaf/auth/login_or_register.dart';
 import 'package:saaf/pages/login.dart';
 import 'package:saaf/theme/dark_mode.dart';
 import 'package:saaf/theme/light_mode.dart';
@@ -14,7 +15,7 @@ class SaafApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: LoginOrRegister(),
       theme: lightMode,
       darkTheme: darkMode,
     );

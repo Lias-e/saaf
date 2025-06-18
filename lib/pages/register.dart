@@ -4,17 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:saaf/components/text.dart';
 import 'package:saaf/components/my_button.dart';
 
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   final void Function()? onTap;
 
-  LoginPage({super.key, required this.onTap});
+  RegisterPage({super.key, required this.onTap});
 
+  final TextEditingController usernameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmpwController = TextEditingController();
 
-  //Login method
+  //Regester method
 
-  void login() {}
+  void regester() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +39,14 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               FieldText(
+                hintText: "Username",
+                obscureText: false,
+                controller: usernameController,
+              ),
+
+              const SizedBox(height: 10),
+
+              FieldText(
                 hintText: "email",
                 obscureText: false,
                 controller: emailController,
@@ -51,30 +62,26 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 10),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Forgot Password?",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ],
+              FieldText(
+                hintText: "confirm password",
+                obscureText: true,
+                controller: confirmpwController,
               ),
 
               const SizedBox(height: 25),
 
-              MyButton(text: "Login", onTap: login),
+              MyButton(text: "Register", onTap: regester),
 
               const SizedBox(height: 10),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account? "),
+                  Text("you have an account? "),
                   GestureDetector(
                     onTap: onTap,
                     child: Text(
-                      "Register here",
+                      "Login here",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),

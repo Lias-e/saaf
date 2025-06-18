@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class FieldText extends StatelessWidget {
   final String hintText;
-  final boolobscureText;
+  final bool obscureText;
   final TextEditingController controller;
 
   const FieldText({
     super.key,
     required this.hintText,
-    required this.boolobscureText,
+    required this.obscureText,
     required this.controller,
   });
 
@@ -18,7 +18,9 @@ class FieldText extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+        hintText: hintText,
       ),
+      obscureText: obscureText,
     );
   }
 }
