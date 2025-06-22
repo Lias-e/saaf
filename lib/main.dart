@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:saaf/auth/login_or_register.dart';
-import 'package:saaf/pages/login.dart';
 import 'package:saaf/theme/dark_mode.dart';
 import 'package:saaf/theme/light_mode.dart';
 
